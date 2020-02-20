@@ -3,11 +3,9 @@ var syntax = 'scss', // Syntax: sass or scss;
 gmWatch = false; // ON/OFF GraphicsMagick watching "img/_src" folder (true/false). Linux install gm: sudo apt update; sudo apt install graphicsmagick
 
 var gulp = require('gulp'),
-    gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
     cleancss = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -32,7 +30,7 @@ gulp.task('browser-sync', function () {
 
 // Sass|Scss Styles
 gulp.task('styles', function () {
-    return gulp.src('app/' + syntax + '/**/*.' + syntax + '')
+    return gulp.src('app/scss/main.scss')
         .pipe(sass({outputStyle: 'expanded'}).on("error", notify.onError()))
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer(['last 15 versions']))
@@ -94,7 +92,7 @@ gulp.task('rsync', function () {
 });
 
 // If Gulp Version 3
-if (gulpVersion == 3) {
+if (gulpVersion === '3') {
 
     // Img Processing Task for Gulp 3
     gulp.task('img', ['img1x', 'img2x']);
@@ -113,7 +111,7 @@ if (gulpVersion == 3) {
 }
 
 // If Gulp Version 4
-if (gulpVersion == 4) {
+if (gulpVersion === '4') {
 
     // Img Processing Task for Gulp 4
     gulp.task('img', gulp.parallel('img1x', 'img2x'));
