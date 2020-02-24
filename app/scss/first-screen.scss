@@ -16,7 +16,8 @@
 
   &__background {
     z-index: -2;
-    background: url('../img/first-screen__background.jpg');
+    background: url('../img/first-screen__background.jpg') no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;

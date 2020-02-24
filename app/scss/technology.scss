@@ -1,0 +1,28 @@
+.technology {
+  &__header {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 73px;
+    margin: 0;
+  }
+
+  &__items {
+    display: flex;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__item {
+    flex-basis: 25%;
+    text-align: center;
+  }
+
+  &__digit {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 1;
+    color: rgba(16, 16, 16, 0.08);
+  }
+}
