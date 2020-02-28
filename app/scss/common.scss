@@ -16,9 +16,41 @@ body * {
   font-family: 'Lato', sans-serif;
 }
 
+.h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 86px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 119px;
+  margin-bottom: 38px;
+}
+
 .h2 {
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
   line-height: 43px;
+}
+
+.h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 320px) {
+
 }

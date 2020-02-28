@@ -1,0 +1,100 @@
+.contact {
+  padding: 87px 0 123px;
+
+  &__title {
+    margin-bottom: 53px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: justify;
+    padding-right: 109px;
+  }
+
+  &__container {
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  &__left {
+    flex-basis: 52%;
+    padding: 0 0 0 11px;
+  }
+
+  &__right {
+    flex-basis: 49%;
+    padding-top: 30px;
+  }
+
+  &__row {
+    margin-bottom: 25px;
+  }
+
+  &__row--double {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    height: 60px;
+    padding: 10px 10px 10px 29px;
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    border-radius: 6px;
+    line-height: 1;
+    background: #fff;
+    width: 100%;
+
+    &::placeholder {
+      color: rgba(19, 39, 67, 0.5);
+    }
+  }
+
+  &__input--half:first-child {
+    margin-right: 30px;
+  }
+
+  &__input--select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 15px;
+    background-image: url('../img/contact__select.svg');
+    &:invalid {
+      color: gray;
+    }
+  }
+
+  &__button {
+    height: 50px;
+    background: #ED4C5C;
+    color: #fff;
+    border: 1.5px solid #ED4C5C;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    padding: 15px 33px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
