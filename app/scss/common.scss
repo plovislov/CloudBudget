@@ -16,6 +16,9 @@ body * {
   font-family: 'Lato', sans-serif;
 }
 
+body {
+  min-width: 320px;
+}
 .h1 {
   font-style: normal;
   font-weight: bold;
@@ -44,13 +47,37 @@ body * {
 }
 
 @media (max-width: 1200px) {
-
+  .h1 {
+    font-size: 56px;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+  .h3 {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
-
+  .h1 {
+    font-size: 38px;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+  .h3 {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 320px) {
-
+  .h1 {
+    font-size: 38px;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+  .h3 {
+    font-size: 16px;
+  }
 }
