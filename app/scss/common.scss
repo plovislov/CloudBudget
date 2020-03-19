@@ -19,6 +19,11 @@ body * {
 body {
   min-width: 320px;
 }
+
+body.menu-opened {
+  overflow: hidden;
+}
+
 .h1 {
   font-style: normal;
   font-weight: bold;
