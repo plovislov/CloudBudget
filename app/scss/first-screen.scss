@@ -165,6 +165,7 @@
       position: fixed;
       background-color: #dc4b68;
       width: 100%;
+      z-index: 99;
     }
 
     &__nav-button {
@@ -215,7 +216,7 @@
       top: 37px;
       right: 0;
       left: 0;
-      transform: translateX(-100vw);
+      transform: translateX(-550vw);
       padding: 50px 15px 15px;
       transition: ease-in-out .3s;
       flex-direction: column;
