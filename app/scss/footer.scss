@@ -15,7 +15,8 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    &:first-child{
+
+    &:first-child {
       margin-bottom: 100px;
     }
   }
@@ -51,9 +52,10 @@
     color: #101010;
     margin-bottom: 11px;
   }
-   &__link--phone {
-     margin-bottom: 18px;
-   }
+
+  &__link--phone {
+    margin-bottom: 18px;
+  }
 
   &__link-wrapper {
     font-size: 0;
@@ -82,11 +84,29 @@
 }
 
 @media (max-width: 1200px) {
-
+  .footer {
+    &__container {
+      width: 768px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
+  .footer {
+    &__container {
+      width: auto;
+    }
 
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 45%;
+    }
+  }
 }
 
 @media (max-width: 320px) {

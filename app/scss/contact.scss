@@ -66,6 +66,7 @@
     background-position: 95% 50%;
     background-size: 15px;
     background-image: url('../img/contact__select.svg');
+
     &:invalid {
       color: gray;
     }
@@ -88,13 +89,61 @@
 }
 
 @media (max-width: 1200px) {
+  .contact {
+    &__container {
+      width: 768px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
+    &__left {
+      padding-left: 0;
+    }
+  }
 }
 
 @media (max-width: 768px) {
+  .contact {
+    padding: 25px 0 80px;
+
+    &__container {
+      flex-wrap: wrap;
+      width: auto;
+    }
+
+    &__left {
+      flex-basis: 100%;
+    }
+
+    &__right {
+      flex-basis: 100%;
+    }
+
+    &__text {
+      padding-right: 0;
+    }
+  }
 
 }
 
 @media (max-width: 320px) {
+  .contact {
+    &__row--double {
+      flex-wrap: wrap;
+    }
 
+    &__input--half {
+      display: block;
+      width: 100%;
+      margin-bottom: 25px;
+
+      &:first-child {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

@@ -63,7 +63,8 @@
     &:first-child {
       margin-right: 21px;
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
       margin-right: 23px;
     }
   }
@@ -72,10 +73,36 @@
 }
 
 @media (max-width: 1200px) {
-
+  .attention__container {
+    width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 @media (max-width: 768px) {
+  .attention {
+    padding-top: 0;
+
+    &__container {
+      flex-wrap: wrap;
+      width: auto;
+    }
+
+    &__left, &__right {
+      flex-basis: 100%;
+    }
+
+    &__left {
+      margin-bottom: 50px;
+    }
+
+    &__slider-main {
+      width: 80%;
+      min-width: 290px;
+      object-fit: cover;
+    }
+  }
 
 }
 
