@@ -9,3 +9,22 @@ button.addEventListener('click', function () {
     menu.classList.toggle('opened');
     body.classList.toggle('menu-opened');
 });
+
+document.querySelectorAll('.js-link').forEach(item => {
+    item.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: "smooth",
+        });
+
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            button.classList.toggle('opened');
+            menu.classList.toggle('opened');
+            body.classList.toggle('menu-opened');
+            console.log('matches');
+        }
+    });
+
+
+});

@@ -69,6 +69,15 @@
     }
   }
 
+  &__menu-item-link {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__controls {
     display: flex;
   }
