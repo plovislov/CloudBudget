@@ -17,6 +17,7 @@
 
   &__right {
     flex-basis: 50%;
+    width: 50%;
   }
 
   &__title {
@@ -39,15 +40,14 @@
   }
 
   &__slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
   }
 
   &__slider-main {
     width: 445px;
     height: 311px;
     border-radius: 15px;
+    overflow: hidden;
   }
 
   &__links {
@@ -70,6 +70,59 @@
   }
 
 
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0;
+  border: none;
+  background: rgba(185, 185, 185, .5);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all ease .3s;
+
+  &:hover {
+    background: rgba(185, 185, 185, .8);
+  }
+
+  &::after {
+    content: '';
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    vertical-align: middle;
+  }
+}
+
+.slick-prev {
+  left: 0;
+
+  &::after {
+    transform: rotate(135deg);
+  }
+}
+
+.slick-next {
+  right: 0;
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.slick-list {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slick-slide {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {

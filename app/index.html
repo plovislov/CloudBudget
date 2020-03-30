@@ -17,6 +17,7 @@
     <!-- Template Basic Images End -->
 
     <meta name="theme-color" content="#000">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 
@@ -72,7 +73,7 @@
     <div class="video__right">
         <div class="video__right-container">
             <button class="video__right-button"></button>
-            <div class="video__replacer"></div>
+            <div class="video__replacer js-replacer"></div>
             <div class="video__player-container">
                 <div id="player"></div>
             </div>
@@ -177,6 +178,8 @@
         <div class="attention__right">
             <div class="attention__slider js-slider">
                 <img src="./img/slider__1.jpg" alt="slider image" class="attention__slider-main">
+                <img src="./img/slider__2.jpg" alt="slider image" class="attention__slider-main">
+                <img src="./img/slider__3.jpg" alt="slider image" class="attention__slider-main">
             </div>
         </div>
     </div>
@@ -236,19 +239,16 @@
                 <h3 class="h3 footer__title">Services</h3>
                 <div class="footer__texts">
                     <div class="footer__link-wrapper">
-                        <a href="#" class="footer__link">Overview</a>
+                        <a href="#overview" class="footer__link js-link">Overview</a>
                     </div>
                     <div class="footer__link-wrapper">
-                        <a href="#" class="footer__link">Features</a>
+                        <a href="#features" class="footer__link js-link">Features</a>
                     </div>
                     <div class="footer__link-wrapper">
-                        <a href="#" class="footer__link">Technology</a>
+                        <a href="#technology" class="footer__link js-link">Technology</a>
                     </div>
                     <div class="footer__link-wrapper">
-                        <a href="#" class="footer__link">Terms & Conditions</a>
-                    </div>
-                    <div class="footer__link-wrapper">
-                        <a href="#" class="footer__link">Privacy</a>
+                        <a href="#" class="footer__link js-link">Privacy</a>
                     </div>
                 </div>
             </div>
@@ -283,8 +283,13 @@
     </div>
 
 </footer>
-
-<script src="js/scripts.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://www.youtube.com/player_api" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="scripts.min.js" defer></script>
 
 </body>
 </html>

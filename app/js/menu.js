@@ -1,5 +1,3 @@
-// menu button
-
 let button = document.querySelector('.js-nav-button');
 let menu = document.querySelector('.js-menu');
 let body = document.querySelector('body');
@@ -25,6 +23,4 @@ document.querySelectorAll('.js-link').forEach(item => {
             console.log('matches');
         }
     });
-
-
 });

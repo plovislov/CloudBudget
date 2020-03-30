@@ -2,6 +2,7 @@
 /dist/
 /.git/
 /app/css/
+/app/scripts.min.js
 /**/_backstage
 /**/package-lock.json
 /**/Thumbs.db

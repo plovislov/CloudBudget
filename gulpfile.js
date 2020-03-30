@@ -1,8 +1,8 @@
-var syntax = 'scss', // Syntax: sass or scss;
+const syntax = 'scss', // Syntax: sass or scss;
     gulpVersion = '4'; // Gulp version: 3 or 4
 gmWatch = false; // ON/OFF GraphicsMagick watching "img/_src" folder (true/false). Linux install gm: sudo apt update; sudo apt install graphicsmagick
 
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     concat = require('gulp-concat'),
@@ -42,11 +42,13 @@ gulp.task('styles', function () {
 // JS
 gulp.task('scripts', function () {
     return gulp.src([
-        'app/js/common.js', // Always at the end
+        'app/js/menu.js',
+        'app/js/player.js',
+        'app/js/slider.js',
     ])
         .pipe(concat('scripts.min.js'))
         // .pipe(uglify()) // Mifify js (opt.)
-        .pipe(gulp.dest('app/js'))
+        .pipe(gulp.dest('app/'))
         .pipe(browserSync.reload({stream: true}))
 });
 
@@ -102,7 +104,7 @@ if (gulpVersion === '3') {
 
     gulp.task('watch', taskArr, function () {
         gulp.watch('app/' + syntax + '/**/*.' + syntax + '', ['styles']);
-        gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
+        gulp.watch(['libs/**/*.js', 'app/js/*.js'], ['scripts']);
         gulp.watch('app/*.html', ['code']);
         gmWatch && gulp.watch('app/img/_src/**/*', ['img']);
     });
@@ -118,7 +120,7 @@ if (gulpVersion === '4') {
 
     gulp.task('watch', function () {
         gulp.watch('app/' + syntax + '/**/*.' + syntax + '', gulp.parallel('styles'));
-        gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
+        gulp.watch(['libs/**/*.js', 'app/js/*.js'], gulp.parallel('scripts'));
         gulp.watch('app/*.html', gulp.parallel('code'));
         gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img')); // GraphicsMagick watching image sources if allowed.
     });
