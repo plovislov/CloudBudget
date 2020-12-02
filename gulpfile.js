@@ -93,25 +93,6 @@ gulp.task('rsync', function () {
         }))
 });
 
-// If Gulp Version 3
-if (gulpVersion === '3') {
-
-    // Img Processing Task for Gulp 3
-    gulp.task('img', ['img1x', 'img2x']);
-
-    var taskArr = ['styles', 'scripts', 'browser-sync'];
-    gmWatch && taskArr.unshift('img');
-
-    gulp.task('watch', taskArr, function () {
-        gulp.watch('app/' + syntax + '/**/*.' + syntax + '', ['styles']);
-        gulp.watch(['libs/**/*.js', 'app/js/*.js'], ['scripts']);
-        gulp.watch('app/*.html', ['code']);
-        gmWatch && gulp.watch('app/img/_src/**/*', ['img']);
-    });
-    gulp.task('default', ['watch']);
-
-}
-
 // If Gulp Version 4
 if (gulpVersion === '4') {
 
